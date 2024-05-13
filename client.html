@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Dashboard</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        text-align: center;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    .sidebar {
+        width: 250px;
+        height: 100%;
+        background-color: #f4f4f4;
+        padding: 20px;
+    }
+    .main-content {
+        flex-grow: 1;
+        padding: 20px;
+    }
+    .card {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .container .sidebar ul li:hover{
+        background: #0ae0e4;
+        color: #333;
+    }
+    .container .sidebar ul li{
+        position: relative;
+        list-style: none;
+        padding: 10px;
+        text-decoration: none;
+
+    }
+</style>
+</head>
+<body>
+    <div class="header">
+        <h1>Client Dashboard</h1>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <h3>Sidebar Menu</h3>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="card">
+                <h2>Welcome, John Doe!</h2>
+                <p>Your account overview goes here...</p>
+            </div>
+            <div class="card">
+                <h2>Recent Orders</h2>
+                <p>List of recent orders...</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

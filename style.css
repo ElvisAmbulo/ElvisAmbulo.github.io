@@ -1,0 +1,317 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Dubai;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#9f9f9962, #abe4ed);
+}
+.full{
+    font-variation-settings: 
+    'Fill' 1,
+    'weight' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+::-webkit-scrollbar{
+    width: 10px;    
+}
+::-webkit-scrollbar-track{
+    background: #37dfdf;
+}
+::-webkit-scrollbar-thumb{
+    background: #f4dbfb;
+    border-radius: 10px;
+    border: 3px solid #fff;
+}
+.container{
+    position: relative;
+    width: 95%;
+    height: 95vh;
+    background: rgb(225, 255, 255, .2);
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    border: 5px solid #fff;
+    box-shadow: 0 0 5px rgb(0, 0, 0, .1)
+    0 0 10px rgb(0, 0, 0, .2)
+    0 0 15px rgb(0, 0, 0, .2);
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+
+}
+.container .left{
+    position: relative;
+    width: 250px;
+    height: 100%;
+    background: rgb(255, 255, 255, 1);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    box-shadow: 35px 35px 65px 0px rgb(255, 255, 255, .5)
+    inset - 8px -8px 16px 0px rgb 255, 255, 255, .6,
+    inset 0px 11px 28px 0px rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
+}
+.container .left header{
+    position: relative;
+    width: 100%;
+}
+.container .left header .logo{
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+}
+/* .container .left header img{
+    position: relative;
+    width: 100px;
+    height: 70px;
+} */
+.container .left header .logo h2{
+    font-size: 3.5vh;
+    font-weight: 500;
+    cursor: pointer;
+    color: #000;
+}
+.container .left header .logo .close{
+    position: relative;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    display: none;
+}
+.container .left header nav{
+    position: relative;
+    padding: 20px 0 20px 20px;
+}
+
+.container .left header nav a{
+    position: relative;
+    padding-bottom: 10px;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    left: 10px;
+    border-radius: 15px;
+}
+.container .left header nav a:hover{
+    color: #e20c0c;
+    background: #37dfdf;
+}
+.container .left header nav ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+.container .left header nav ul li{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .left header nav ul li a{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    padding-left: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: .3s ease;
+}
+.container .left header nav ul li:first-child a,
+.container .left header nav ul li a:hover{
+    transition: 0s;
+    background: #d5e8e3;
+}
+.container .left header nav ul li a::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: #6577ff;
+    transition: .3s ease;    
+}
+.container .left header nav ul li:first-child a::before,
+.container .left header nav ul li a:hover::before{
+    width: 3px;    
+}
+.container .left header nav ul li a .title{
+    color: #000;
+    font-size: 1.1em;
+}
+.container .left header nav ul :first-child a.material-symbols-outlined
+.container .left header nav ul :first-child a .title,
+.container .left header nav ul li a:hover .material-symbols-outlined
+.container .left header nav ul li a:hover .title{
+    color: #6377ff;
+
+}
+/* .container .right{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.container .right .top{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+}
+.container .right .top .searchBx{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.container .right .top h2{
+    color: #000;
+    font-size: 1.4em;
+    cursor: pointer;    
+}
+.container .right .top .searchBx .inputBx{
+    position: relative;
+    width: 250px;
+    height: 40px;
+    background: #f8f2fe;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+    gap: 10px;
+    overflow: hidden;
+}
+.container .right .top .searchBx .inputBx span{
+    color: #999;
+    cursor: pointer;
+}
+.container .right .top .searchBx .inputBx input{
+    position: relative;
+    width: 100%;
+    height: 25px;
+    outline: none;
+    background: transparent;
+    margin-left: 10px;
+    font-size: 1.2em;
+    color: #000;
+}
+.container .right .top .searchBx .inputBx span.searchClose{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    display: none;
+}
+.container .right .top .user{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.container .right .top .user span{
+    color: #000;
+    cursor: pointer;
+}
+.container .right .top .user .userImg img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    
+} 
+.container .right .top .user h2{
+    font-size: 1.1em;
+    line-height: 1px;
+    white-space: nowrap;
+    cursor: pointer;    
+}
+.container .right .top .user .arrow{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #999;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .right .top .user .arrow span{
+    color: #000;
+    font-size: 2em;
+    font-weight: 600;
+    transition: .3 ease;
+}
+.container .right .top .user .arrow:hover
+span{
+    transform: scale(1.1);
+}
+.container .right .top .user .toggle{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+    display: none; 
+}
+.container .right .top .user .toggle span{
+    color: #000;
+    font-size: 1.5em;
+    font-weight: 900;
+    transition: .3s ease, opacity 0s;
+    visibility: 0s;
+}
+.container .right .top .user.toggle :hover span{
+    transform: scale(1.1);
+}
+.container .right .top .user .toggle span:last-child{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+}
+.container .right .top .user .toggle .active */

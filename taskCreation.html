@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Task</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: url(/static/images/logo.jpg);
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type="text"],
+    input[type="date"],
+    select,
+    textarea,
+    input[type="file"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: #fff url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"%3E%3Cpath fill="%23000000" d="M4 5L1 2h6z"/%3E%3C/svg%3E') no-repeat right 10px top 50%;
+        padding-right: 30px;
+    }
+    input[type="file"] {
+        padding: 5px;
+    }
+    input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        width: 150px;
+        height: 50px;
+    }
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav >
+    <div class="container">
+        <h2 class="navbar-brand">Task Creation Dashboard</h2>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"
+                style="list-style: none;
+                text-decoration: none;
+                ">
+                    <a class="nav-link" href="/one">Home</a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>{{message}}</h1>
+    <form action="/taskCreation" method="post" enctype="multipart/form-data">
+        <label for="task_name">Task Name:</label>
+        <input type="text" id="task_name" name="task_name" required>
+        
+        <label for="task_desc">Task Description:</label>
+        <textarea id="task_desc" name="task_desc" rows="4" cols="50" required></textarea>
+        
+        <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date" name="start_date" required>
+        
+        <label for="due_date">Due Date:</label>
+        <input type="date" id="due_date" name="due_date" required>
+        
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+            <option value="Pending">Pending</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+        </select>
+        
+        <label for="attachment">Attachment:</label>
+        <input type="file" id="attachment" name="attachment" accept="image/*">
+        
+        <input type="submit" value="Upload Task">
+    </form>
+</div>
+
+</body>
+</html>
+
+

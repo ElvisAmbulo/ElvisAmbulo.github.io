@@ -1,0 +1,45 @@
+<!-- NAVBAR -->
+
+<section class="row">
+    <div class="col-md-12">
+        <nav class="navbar navbar-expand-md navbar-light btn-light p-3">
+                <a href="#" class="navbar-brand">Zuri<b class="text-success">Institute</b></a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                                <div class="navbar-nav">
+                                    <a href="/taskDashboard" class="nav-item nav-link">Task</a>
+                                    <a href="/" class="nav-item nav-link"></a>
+                                    <a href="/" class="nav-item nav-link">About US</a>
+                                </div>
+                            <div class="ms-auto">
+
+                                {% if session["key"] %}
+                                <b>Welcome Back: {{session["key"]}} </b>
+                                <a href="/taskCreation" class="btn btn-warning">Create Task</a>
+                                <a href="/logout" class="btn btn-danger">Logout</a>
+                                
+
+                                {% else %} 
+                                <a href="/login" class="btn btn-success">Login</a>
+                                <a href="/register" class="btn btn-primary">Register</a>
+                                <a href="/vendors" class="btn btn-dark"></a>
+                                <a href="/vlogin" class="btn btn-warning"></a>
+                                
+
+                                {% endif %}
+
+                                
+                                <!--    TODO Logout-->
+                                
+                            </div>
+
+                            
+                            
+
+            </div>
+        </nav>
+    </div>
+</section>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task Submission</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        background: url(/static/images/logo.jpg);
+    }
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        
+    }
+    h1, h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type="text"],
+    input[type="date"],
+    select,
+    textarea,
+    input[type="file"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+    <nav >
+        <div class="container">
+            <h2 class="navbar-brand">Submit completed task!</h2>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"
+                    style="list-style: none;
+                    text-decoration: none;
+                    ">
+                        <a class="nav-link" href="/taskDashboard">Back TO Dashboard</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="container">
+    <h1>{{message}}</h1>
+
+    <form action="/submit" method="post" enctype="multipart/form-data">
+        <label for="task_name">Task Name:</label>
+        <input type="text" id="task_name" name="task_name" required><br>
+                      
+        <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date" name="start_date" required><br>
+        
+        <label for="Completed_date">Completed Date:</label>
+        <input type="date" id="Completed_date" name="Completed_date" required><br>
+                        
+        <label for="attachment">Attachment:</label>
+        <input type="file" id="attachment" name="attachment" accept="image/*"><br>
+        
+        <input type="submit" value="Submit Task">
+    </form>
+</div>
+
+</body>
+</html>

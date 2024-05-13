@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Role Selection</title>
+<!-- <link rel="stylesheet" href="styles.css">  -->
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url(/static/images/logo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #f30707;
+    text-align: top;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+}
+
+.admin-btn,
+.user-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.admin-btn:hover,
+.user-btn:hover {
+    background-color: #0056b3;
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Your Role</h1>
+        <div class="button-group">
+            <a href="/admin2">
+                <button class="admin-btn">Admin</button>
+            </a>
+            <a href="/login">
+                <button class="user-btn">User</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

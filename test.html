@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Task</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background: url(/static/images/logo.jpg);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: antiquewhite;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .task-details {
+            margin-bottom: 20px;
+        }
+
+        .task-details h2 {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .task-details p {
+            color: #777;
+        }
+
+        .task-image {
+            text-align: center;
+        }
+
+        .task-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #6377ff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #4a5ae0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Task Details</h1>
+        <div class="task-details">
+            <h2>{{ single[1] }}</h2>
+            <p><strong>Start Date:</strong> {{ single[3] }}</p>
+            <p><strong>Due Date:</strong> {{ single[4] }}</p>
+            <p><strong>Status:</strong> {{ single[5] }}</p>
+            <p><strong>Description:</strong> {{ single[2] }}</p>
+        </div>
+        <div class="task-image">
+            <img src="../static/images/{{ single[6] }}" alt="">
+        </div>
+        <a href="/taskDashboard" class="btn">Back to Dashboard</a><br><br>
+        <a href="/submit" class="btn">Submit Task</a>
+    </div>
+</body>
+</html>

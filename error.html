@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap'); */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Changed 'block-size' to 'box-sizing' */
+    font-family: 'Arvo', sans-serif; /* Added font-family */
+    transition: all 0.5s; /* Added transition for smoother effects */
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.container {
+    position: relative;
+    width: 800px; /* Added 'px' unit */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container h1 {
+    position: relative;
+    padding-top: 10px;
+    color: hsl(186, 75%, 66%);
+    font-size: 5rem;
+    z-index: 1000;
+}
+.container .imgBx {
+    position: relative;
+    width: 700px;
+    height: 400px;
+    background: url('/static/images/404.gif') center/cover; /* Added background position and size */
+    bottom: 60px;
+}
+.container .detail {
+    position: relative;
+    top: -70px;
+    color: hsl(186, 75%, 66%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container .detail h3 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin: 10px;
+}
+.container .detail span {
+    text-transform: lowercase;
+    margin-bottom: 20px;
+}
+.container .detail button {
+    width: 150px;
+    height: 50px;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    background: hsl(186, 75%, 66%);
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+.container .detail button:hover {
+    color: hsl(186, 75%, 66%);
+    background: #fff;
+}
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>404</h1>
+        <div class="imgBx"></div>
+        <div class="detail">
+            <h3>Looks like you are lost</h3>
+            <span>the page you are looking for is not available!</span>
+            <a href="/taskDashboard"><button>Go to Home</button></a>
+        </div>
+    </div>
+</body>
+</html>
